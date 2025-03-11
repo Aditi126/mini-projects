@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --bgc--: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+#img1{
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    padding: 10px;
+}
+.navBar{
+    background-image: var(--bgc--);
+    width: 100%;
+}
+nav{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.icon{
+    margin: 10px;
+    padding: 10px;
+    height: 40px;
+    width: 40vw;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+    word-spacing: 10px;
+    color: rgb(29, 29, 52);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.navs{
+    margin: 10px;
+    padding: 10px;
+    height: 40px;
+    width: 40vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-between;
+}
+a{
+    text-decoration: none;
+    color: rgb(29, 29, 52);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+.cpr{
+    background-image: var(--bgc--);
+    text-align: center;
+}
+.cpr p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+.items{
+    display: flex;
+    flex-direction: row;
+}
+section{
+    border: 1px solid black;
+    margin: 5px;
+    width: 50%;
+}
+.leftBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    border-radius: 5%;
+    width: 70%;
+}
+.food{
+    margin: 20px;
+    box-shadow: 3px 3px 20px black;
+    padding: 20px;
+}
+.rightBox img{
+    height: 25vh;
+    width: auto;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5%;
+}
+.rightBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5%;
+    width: 30%;
+}
+.ingredients{
+    margin: 10px;
+    padding: 10px;
+}
+.process{
+    margin: 10px;
+    padding: 10px;
+}
+ul{
+    list-style: circle;
+}
+.contentBox{
+    display: flex;
+    justify-content: center;
+}
