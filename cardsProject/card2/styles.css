@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bgc--: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+    --border--: 1px dashed rgb(31, 30, 78);
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bgc--);
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+    align-items: center;
+    height: 500px;
+    width: 300px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.586);
+    border-radius: 20px;
+    background-color: white;
+}
+.item1{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 150px;
+    width: 300px;
+}
+.item1 img{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 100%;
+    width: 100%;
+}
+.item2 h2{
+    font-family: cursive;
+    font-weight: bolder;
+}
+.item3 p{
+    padding: 5px;
+    text-align: center;
+    font-size: small;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.item4{
+    padding: 10px;
+    background-color: #d9e7ff;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.payment{
+    padding-right: 30px;
+}
+.payment p,a{
+    font-size: small;
+}
+a{
+    text-decoration: none;
+    color: rgb(14, 54, 171);
+}
+.item4 img{
+    padding: 5px;
+    height: 30pxx;
+    width: 50px;
+}
+.item5{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.item5 button{
+    margin: 10px;
+    height: 40px;
+    width: 150px;
+    border-radius: 10px;
+    transition: all 100ms ease-in-out 0s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.23);
+    border-style: none;
+}
+.confirm{
+    background-color: rgb(35, 45, 75);
+    color: white;
+}
+.item5 button:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.551);
+    transform: scale(1.1);
+}
