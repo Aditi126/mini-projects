@@ -68,7 +68,7 @@ a{
 section{
     border: 1px solid black;
     margin: 5px;
-    width: 50%;
+    width: 70%;
 }
 .leftBox{
     display: flex;
@@ -84,9 +84,7 @@ section{
     padding: 20px;
 }
 .rightBox img{
-    height: 25vh;
-    width: auto;
-    margin: 5px;
+    height: 150px;
     border: 1px solid black;
     border-radius: 5%;
 }
@@ -95,10 +93,15 @@ section{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 10px;
     padding: 10px;
     border-radius: 5%;
     width: 30%;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s linear 0s;
+}
+.rightBox .overlay:hover{
+    transform: scale(1.1);
 }
 .ingredients{
     margin: 10px;
@@ -114,4 +117,26 @@ ul{
 .contentBox{
     display: flex;
     justify-content: center;
+}
+.overlay{
+    position: relative;
+}
+.overlay span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(42, 41, 41, 0.71);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: small;
+    color: aliceblue;
+    opacity: 0;
+    border-radius: 5%;
+    transition: all 100ms linear 0s; 
+}
+.overlay span:hover{
+    opacity: 1;
 }
