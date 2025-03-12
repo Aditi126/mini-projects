@@ -1,0 +1,2 @@
+Does not have a floating navigation bar
+Not responsive. Cannot be opened on handheld devices.
