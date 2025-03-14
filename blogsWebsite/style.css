@@ -51,11 +51,11 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.173);
     transition: all 100ms linear 0s;
 }
 
 .card:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.173);
     transform: scale(1.1);
 }
 
