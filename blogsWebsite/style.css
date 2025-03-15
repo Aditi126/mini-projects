@@ -4,24 +4,34 @@
     box-sizing: border-box;
 }
 
-.container {
+body {
     height: 100vh;
     width: 100vw;
+}
+
+.container {
+    height: 100vh;
+    max-width: 75vw;
+    margin: 0 auto;
+    padding: 0 2rem 2rem;
     display: grid;
-    grid-template-rows: 20% 70%;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 2fr 7fr;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 30px;
     gap: 30px;
 }
 
 .header {
-    width: 50%;
-    grid-column-start: 1;
+    padding: 50px;
+    width: 100%;
+    grid-column-start: 2;
     grid-column-end: 4;
     place-self: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .header p {
@@ -29,16 +39,13 @@
 }
 
 .card-container {
-    width: 75vw;
+    width: 100%;
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 5;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(4, 1fr);
     row-gap: 50px;
-    column-gap: 30px;
-    justify-items: center;
-    justify-self: center;
 }
 
 .card {
@@ -54,12 +61,12 @@
     transition: all 100ms linear 0s;
 }
 
-.card:hover{
+.card:hover {
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.173);
     transform: scale(1.1);
 }
 
-.item1{
+.item1 {
     position: relative;
     overflow: hidden;
 }
@@ -73,7 +80,8 @@
     width: 100%;
     transition: all 100ms linear 0s;
 }
-.card:hover .item1 img{
+
+.card:hover .item1 img {
     transform: scale(1.1);
 }
 
@@ -139,6 +147,7 @@
 .person img {
     width: 50px;
     height: 50px;
+    border-radius: 100%;
 }
 
 .person .details {
@@ -159,9 +168,35 @@
     background-color: rgba(14, 45, 103, 0.289);
 }
 
-@media (max-width: 320px) {
+@media (max-width: 1024px) {
     .card-container {
-        grid-template-rows: repeat(6, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-template-rows: repeat(5, 1fr);
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 320px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+
+    }
+    .card-container {
+        grid-template-rows: auto;
+        grid-template-columns: repeat(1, 1fr);
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .card{
+        align-self: start;
     }
 }
