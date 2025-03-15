@@ -59,11 +59,22 @@
     transform: scale(1.1);
 }
 
-img {
+.item1{
+    position: relative;
+    overflow: hidden;
+}
+
+.item1 img {
+    object-fit: cover;
+    object-position: center;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     height: 100%;
     width: 100%;
+    transition: all 100ms linear 0s;
+}
+.card:hover .item1 img{
+    transform: scale(1.1);
 }
 
 .item2 {
