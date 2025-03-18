@@ -170,7 +170,7 @@ header {
     align-items: start;
 }
 
-.left-box p{
+.left-box p {
     color: var(--light-font);
 }
 
@@ -211,8 +211,20 @@ button {
     font-family: var(--font);
     transition: all 50ms linear 0s;
 }
-.take-tour{
+
+.take-tour {
     background-color: var(--light-font);
+}
+
+.start-now:hover {
+    transform: scale(1.1);
+    background-color: #285586;
+    box-shadow: 3px 3px 4px var(--fontC);
+}
+
+.take-tour:hover {
+    transform: scale(1.1);
+    box-shadow: 3px 3px 4px var(--fontC);
 }
 
 .right-box {
@@ -227,4 +239,11 @@ button {
     object-fit: cover;
     object-position: center;
     border-radius: 20px;
+}
+
+@media (max-width: 1024px) {
+    .content {
+        position: relative;
+        flex-wrap: wrap;
+    }
 }
