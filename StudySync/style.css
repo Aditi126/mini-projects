@@ -269,8 +269,26 @@ button {
 }
 
 @media (max-width: 768px) {
-    .
+    .content{
+        height: fit-content;
+    }
+    .main-content{
+        flex-direction: column;
+        height: fit-content;
+        gap: 30px;
+        overflow: scroll;
+        width: 100vw;
+    }
+    .left-box{
+        width: 100%;
+        height: fit-content;
+        align-items: start;
+        justify-content: center;
+        padding: 0;
+        gap: 20px;
+    }
 }
+
 @media (max-width: 320px) {
     .content{
         width: 100%;
