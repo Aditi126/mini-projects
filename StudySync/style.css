@@ -327,12 +327,16 @@ button {
         justify-items: flex-start;
     }
     .right-box{
-        padding: 0;
+        width: fit-content;
         align-items: center;
         justify-content: start;
+        position: relative;
+        overflow: hidden;
     }
     .right-box img{
         height: 220px;
         width: 220px;
+        object-fit: cover;
+        object-position: center;
     }
 }
