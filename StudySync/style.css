@@ -584,6 +584,10 @@ h3 {
         grid-template-columns: repeat(1, 1fr);
         margin: 0;
     }
+    .review-card-container{
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
 }
 
 @keyframes slideFromLeft {
