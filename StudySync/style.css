@@ -663,6 +663,88 @@ p a{
     box-shadow: 3px 3px 4px var(--fontC);
 }
 
+/* newsletter-section finished */
+
+/* footer-section */
+
+.footer{
+    width: 100%;
+    height: fit-content;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.upper-div{
+    max-width: 80%;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.upper-div p{
+    font-size: smaller;
+    color: var(--light-font);
+    padding: 2px;
+}
+
+.left-div{
+    width: 30vw;
+    padding: 10px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.footer-heading{
+    display: flex;
+    align-items: center;
+}
+
+.footer img{
+    height: 15px;
+    width: 15px;
+}
+
+.right-div{
+    width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.footer-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    gap: 15px;
+    margin-left: 30px;
+    margin-right: 30px;    
+}
+
+.footer-card p{
+    color: var(--fontC);
+    font-weight: bold;
+    padding: 0;
+    font-size: small;
+}
+
+.footer-card a{
+    text-decoration: none;
+    font-size: xx-small;
+    color: var(--light-font);
+}
+
+.lower-div p{
+    padding: 10px;
+    color: var(--fontC);
+    font-size: x-small;
+}
+
 h3 {
     color: var(--fontC);
     font-family: var(--font);
@@ -690,13 +772,46 @@ h3 {
         grid-template-columns: repeat(1, 1fr);
     }
     .newsletter-container{
-        width: 320px;
+        width: 100%;
         height: fit-content;
         overflow: hidden;
         flex-direction: column;
     }
+    .img-div {
+        width: 100%;
+    }
+    .img-div img{
+        width: 100%;
+    }
     .content-div{
         width: 100%;
+    }
+    .upper-div{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+    }
+    .left-div{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+    }
+    .left-div p{
+        display: none;
+    }
+    .right-div{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+    }
+    .icons{
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+    .footer-card{
+        margin: 0;
     }
 }
 
