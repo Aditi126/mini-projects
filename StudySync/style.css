@@ -528,6 +528,7 @@ button {
 }
 
 .review-card{
+    max-width: 295px;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -564,6 +565,104 @@ button {
     align-self: center;
 }
 
+/* testimonial-section finished */
+
+/* newsletter-section */
+
+.newsletter-section{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter-container{
+    max-width: 80%;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    background-color: var(--light-bgc);
+    margin-bottom: 30px;
+    
+}
+.img-div{
+    width: 450px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.img-div img{
+    width: 450px;
+    height: 250px;
+    object-fit: fill;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    object-position: center;
+}
+
+.content-div{
+    margin: 10px;
+    height: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    padding: 30px;
+}
+
+form{
+    width: 100%;
+}
+
+#eml{
+    margin: 5px;
+    padding: 5px;
+    height: 20px;
+    width: 150px;
+    margin-left: 0;
+    border: 1px solid rgba(0, 0, 0, 0.31);
+    border-radius: 3px;
+}
+
+#btn{
+    height: 20px;
+    border: none;
+    border-radius: 3px;
+    width: 75px;
+    background-color: #3e87d5;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: medium;
+    font-family: var(--font);
+    margin: 5px;
+}
+
+.content-div p{
+    color: var(--light-font);
+}
+
+
+p a{
+    text-decoration: underline;
+    color: var(--bgc);
+}
+
+.content-div h3{
+    color: var(--bgc);
+}
+
+#btn:hover{
+    transform: scale(1.075);
+    background-color: #285586;
+    box-shadow: 3px 3px 4px var(--fontC);
+}
+
 h3 {
     color: var(--fontC);
     font-family: var(--font);
@@ -577,6 +676,9 @@ h3 {
         flex-wrap: wrap;
         height: fit-content;
     }
+    .img-div {
+        display: none;
+    }
 }
 
 @media (max-width: 768px){
@@ -586,7 +688,15 @@ h3 {
     }
     .review-card-container{
         grid-template-columns: repeat(1, 1fr);
-        
+    }
+    .newsletter-container{
+        width: 320px;
+        height: fit-content;
+        overflow: hidden;
+        flex-direction: column;
+    }
+    .content-div{
+        width: 100%;
     }
 }
 
