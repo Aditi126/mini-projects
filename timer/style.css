@@ -1,10 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: rgb(255, 252, 234);
 }
-body{
+
+body {
     margin: 0;
     height: 100vh;
     width: 100vw;
@@ -16,9 +17,11 @@ body{
     position: absolute;
     flex-wrap: wrap;
 }
-.main-div{
+
+.main-div {
     height: 400px;
     width: 700px;
+    margin: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,11 +31,10 @@ body{
     background-color: rgba(39, 66, 89, 0.689);
     border: 1px solid rgb(0, 0, 0);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.434);
-    flex-wrap: wrap;
     border-radius: 20px;
 }
 
-.widget-div{
+.widget-div {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -41,7 +43,7 @@ body{
     gap: 15%;
 }
 
-#box{
+#box {
     height: 100px;
     width: 100px;
     padding: 10px;
@@ -50,22 +52,27 @@ body{
     justify-content: center;
     align-items: center;
     gap: 10px;
-    background-color: rgb(255, 252, 234); 
+    background-color: rgb(255, 252, 234);
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 5px -5px 5px rgba(0, 0, 0, 0.434) inset;
 }
 
-#box h5{
+#box h4 {
     color: rgba(39, 66, 89, 0.689);
+    font-size: large;
 }
 
-#inner-box{
+#inner-box {
     height: 80%;
-    width: 100%;
+    color: rgba(39, 66, 89, 0.689);
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-size: 30px;
 }
 
-.progress-div{
+.progress-div {
     width: 100%;
     display: flex;
     align-items: start;
@@ -74,13 +81,40 @@ body{
     gap: 10px;
 }
 
-.progress-bar{
+.progress-bar {
     width: 100%;
     height: 20px;
     margin: 10px;
     margin-left: 0;
     border: 1px solid black;
-    background-color: rgb(255, 252, 234); 
+    background-color: rgb(255, 252, 234);
     box-shadow: 3px -3px 5px rgba(0, 0, 0, 0.434) inset;
     border-radius: 5px;
+}
+
+@media screen and (max-width: 425px) {
+    *{
+        text-align: center;
+    }
+    .main-div {
+        width: fit-content;
+        height: fit-content;
+        flex-wrap: wrap;
+        position: absolute;
+        overflow: scroll;
+
+    }
+
+    .widget-div {
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+    #box{
+        width: 90%;
+        height: 10%;
+        flex-direction: row;
+        justify-content: center;
+        margin: 10px;
+    }
 }
