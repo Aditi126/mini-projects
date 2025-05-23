@@ -1,5 +1,6 @@
 const startDate = new Date().getTime();
-const endDate = new Date("23 May, 2025 22:51:00").getTime();
+const dayOfCompletion = prompt("Enter end date in format: DD Month, Year HH:MM:SS");
+const endDate = new Date(dayOfCompletion.toString()).getTime();
 
 function updateTimer(){
     const now = new Date().getTime();
