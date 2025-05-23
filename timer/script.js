@@ -1,5 +1,5 @@
 const startDate = new Date().getTime();
-const endDate = new Date("23 May, 2025 23:00:00").getTime();
+const endDate = new Date("23 May, 2025 22:51:00").getTime();
 
 function updateTimer(){
     const now = new Date().getTime();
@@ -9,7 +9,7 @@ function updateTimer(){
 
     if(timeRemaining<0){
         clearInterval(timer);
-        document.getElementsByClassName("main-div")[0].innerHTML = "EXPIRED";
+        document.getElementsByClassName("widget-div")[0].innerHTML = "EXPIRED";
         document.getElementsByClassName("progress-bar")[0].style.width = "100%";
         return;
     }
