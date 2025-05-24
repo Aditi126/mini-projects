@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.container{
+    margin: 20px;
+    height: 60vh;
+    padding: 20px;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: rgb(38 38 38);
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+.search-div{
+    width: 100%;;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.username-search{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.username{
+    width: 70%;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.173);
+    border-radius: 5px;
+}
+#search-button{
+    padding: 5px;
+    width: 15%;
+    height: fit-content;
+    background-color: rgb(100 210 255 );
+    border-radius: 5px;
+    font-size: xx-small;
+}
+
+.circle-div{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.circle-div div{
+    height: 100px;
+    width: 100px;
+    border: 5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-div .easy{
+    border-right:5px solid #1cb33d;
+}
+
+
+.circle-div .medium{
+    border-right:5px solid #fac31d;
+}
+
+
+.circle-div .hard{
+    border-right:5px solid #f64747;
+}
+
+.circle-div div p{
+    font-size: small;
+}
