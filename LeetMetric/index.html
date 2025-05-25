@@ -8,15 +8,17 @@
 </head>
 <body>
     <div class="container">
-        <h1>LeetMetric</h1>
-        <div class="search-div">
-            <h3>Enter Username</h3>
+        <div class="heading parent">
+            <h1>LeetMetric</h1>
+        </div>
+        <div class="search-div parent">
+            <p>Search User</p>
             <span class="username-search">
-                <div class="username"></div>
+                <input class="inp" type="text" placeholder="Enter username to search">
                 <button id="search-button">Search</button>
             </span>
         </div>
-        <div class="circle-div">
+        <div class="circle-div parent">
             <div class="easy">
                 <p>Easy</p>
             </div>
@@ -27,11 +29,19 @@
                 <p>Hard</p>
             </div>
         </div>
-        <div class="inf0-div">
-            <div class="problem-count"></div>
-            <div class="rank"></div>
-            <div class="contest-attended"></div>
-            <div class="contest-rating"></div>
+        <div class="info-div parent">
+            <div class="grid-div" id="problem-count">
+                <p></p><h5>Problems Attempted: </h5> 0</p>
+            </div>
+            <div class="grid-div" id="rank">
+                <p></p><h5>Rank: </h5> 0</p>
+            </div>
+            <div class="grid-div" id="contest-attended">
+                <p></p><h5>Contest Attended: </h5> 0</p>
+            </div>
+            <div class="grid-div" id="contest-rating">
+                <p></p><h5>Contest Rating: </h5> 0</p>
+            </div>
         </div>
     </div>
 </body>

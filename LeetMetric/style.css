@@ -12,13 +12,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: black; 
 }
 .container{
     margin: 20px;
-    height: 60vh;
-    padding: 20px;
-    width: 50vw;
+    height: fit-content;
+    padding: 5%;
+    width: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -27,29 +27,40 @@ body{
     color: aliceblue;
     border-radius: 10px;
 }
-
+.heading{
+    width: 100%;;
+    height: fit-content;
+}
+.parent{
+    padding: 10px;
+}
 .search-div{
     width: 100%;;
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 .username-search{
+    height: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
-.username{
+.inp{
     width: 70%;
-    height: 100%;
+    height: 25px;
+    padding-left: 5px;
     border: 1px solid rgba(255, 255, 255, 0.173);
     border-radius: 5px;
+    background: rgba(245, 245, 245, 0.868);
 }
 #search-button{
+    margin: 10px;
     padding: 5px;
-    width: 15%;
-    height: fit-content;
+    width: 75px;
+    height: 25px;
     background-color: rgb(100 210 255 );
     border-radius: 5px;
     font-size: xx-small;
@@ -60,12 +71,15 @@ body{
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
+    /* overflow: scroll; */
 }
 .circle-div div{
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
     border: 5px solid rgba(255, 255, 255, 0.1);
     border-radius: 100%;
     display: flex;
@@ -89,4 +103,43 @@ body{
 
 .circle-div div p{
     font-size: small;
+}
+.info-div{
+    display: grid;
+    width: 100%;
+    height: 30%;
+    grid-template-areas: 
+    "rank problem-count"
+    "contest-attended contest-rating";
+    
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+}
+
+.grid-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+#problem-count{
+    grid-area: problem-count;
+}
+
+
+#rank{
+    grid-area: rank;
+}
+
+#contest-attended{
+    grid-area: contest-attended;
+}
+
+
+#contest-rating{
+    grid-area: contest-rating;
 }
