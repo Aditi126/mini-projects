@@ -7,11 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const easyLabel = document.querySelector(".easy p");
     const mediumLabel = document.querySelector(".medium p");
     const hardLabel = document.querySelector(".hard p");
-    const rank = document.querySelector("#rank");
-    const problems = document.querySelector("#problem-count");
-    const contests = document.querySelector("#contest-attended");
-    const rating = document.querySelector("#contest-rating");
-
+    const rank = document.querySelector("#rank p");
+    const problems = document.querySelector("#problem-count p");
+    const acceptance = document.querySelector("#acceptance-rate p");
+    const submissions = document.querySelector("#submissions p");
 
     function validateUserName(userName) {
         if (userName.trim() === "") {
@@ -21,10 +20,37 @@ document.addEventListener("DOMContentLoaded", function () {
         return regex.test(userName)
     }
 
+    async function fetchUserDetails(username){
+        const url = "https://leetcode-stats-api.herokuapp.com/" + username;
+        try {
+            const response = await fetch(url);
+            if(response.ok){
+                const data = await response.json();
+                console.log(data);
+                rank.innerHTML = data['ranking'];
+                problems.innerHTML = data['totalSolved'];
+                acceptance.innerHTML = data['acceptanceRate'];
+                submissions.innerHTML = Object.keys(data.submissionCalendar).length;
+                easy.addEventListener('mouseover', function(){
+                    easyLabel.innerHTML = data['easySolved'] + "/" + data['totalEasy'];
+                })
+                medium.addEventListener('mouseover', function(){
+                    easyLabel.innerHTML = data['mediumSolved'] + "/" + data['totalMedium'];
+                })
+                hard.addEventListener('mouseover', function(){
+                    easyLabel.innerHTML = data['hardSolved'] + "/" + data['totalHard'];
+                })
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     searchButton.addEventListener("click", function () {
         const userName = usernameInput.value.toString();
-        if(validateUserName(userName))
-            console.log(userName);
+        if(validateUserName(userName)){
+            fetchUserDetails(userName);
+        }
         else    
             alert("Invalid Username");
     })

@@ -110,7 +110,7 @@ body{
     height: 30%;
     grid-template-areas: 
     "rank problem-count"
-    "contest-attended contest-rating";
+    "acceptance-rate submissions";
     
     grid-template-rows: auto;
     grid-template-columns: auto;
@@ -124,6 +124,7 @@ body{
     margin: 10px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
+    gap: 5px;
 }
 
 #problem-count{
@@ -135,11 +136,11 @@ body{
     grid-area: rank;
 }
 
-#contest-attended{
-    grid-area: contest-attended;
+#acceptance-rate{
+    grid-area: acceptance-rate;
 }
 
 
-#contest-rating{
-    grid-area: contest-rating;
+#submissions{
+    grid-area: submissions;
 }
