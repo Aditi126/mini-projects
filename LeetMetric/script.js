@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const problems = document.querySelector("#problem-count p");
     const acceptance = document.querySelector("#acceptance-rate p");
     const submissions = document.querySelector("#submissions p");
+    const circleDiv = document.querySelector(".circle-div");
 
     function validateUserName(userName) {
         if (userName.trim() === "") {
@@ -40,6 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 hard.addEventListener('mouseover', function(){
                     easyLabel.innerHTML = data['hardSolved'] + "/" + data['totalHard'];
                 })
+                if(data['status']=='error'){
+                    alert(data['message']);
+                }
             }
         } catch (error) {
             console.log(error);
