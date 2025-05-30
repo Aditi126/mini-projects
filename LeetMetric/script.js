@@ -21,6 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
         return regex.test(userName)
     }
 
+
+    function updateProgress(solved, total, label, circle, color){
+        const progressWidth = (solved/total) * 100;
+        circle.style = "border: border: 5px solid conic-gradient(#FFFFFF0F 100%, #${color} ${progressWidth}%);"
+    }
+
     async function fetchUserDetails(username){
         const url = "https://leetcode-stats-api.herokuapp.com/" + username;
         try {
@@ -32,18 +38,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 problems.innerHTML = data['totalSolved'];
                 acceptance.innerHTML = data['acceptanceRate'];
                 submissions.innerHTML = Object.keys(data.submissionCalendar).length;
-                easy.addEventListener('mouseover', function(){
-                    easyLabel.innerHTML = data['easySolved'] + "/" + data['totalEasy'];
-                })
-                medium.addEventListener('mouseover', function(){
-                    easyLabel.innerHTML = data['mediumSolved'] + "/" + data['totalMedium'];
-                })
-                hard.addEventListener('mouseover', function(){
-                    easyLabel.innerHTML = data['hardSolved'] + "/" + data['totalHard'];
-                })
                 if(data['status']=='error'){
                     alert(data['message']);
                 }
+                updateProgress(data["easySolved"], data["totalEasy"], easyLabel, easy, '#28c244');
             }
         } catch (error) {
             console.log(error);
