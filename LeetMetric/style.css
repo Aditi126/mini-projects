@@ -76,11 +76,25 @@ body{
     flex-wrap: wrap;
     /* overflow: scroll; */
 }
-.circle-div div{
+.child{
+    --progress-color: #FFFFFF0F;
+    --progress-percent: 0;
     height: 150px;
     width: 150px;
     margin: 10px;
-    border: 5px solid conic-gradient(#FFFFFF0F 100%, #FFFFFF 10%);
+    background: conic-gradient(var(--progress-color) var(--progress-percent), #FFFFFF0F 0%);
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child div{
+    height: 130px;
+    width: 130px;
+    margin: 10px;
+    background-color: rgb(38 38 38);
     border-radius: 100%;
     position: relative;
     display: flex;

@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const easy = document.querySelector(".easy");
     const medium = document.querySelector(".medium");
     const hard = document.querySelector(".hard");
-    const easyLabel = document.querySelector(".easy p");
-    const mediumLabel = document.querySelector(".medium p");
+    const easyLabel = document.querySelector(".easy div p");
+    const mediumLabel = document.querySelector(".medium div p");
     const hardLabel = document.querySelector(".hard p");
     const rank = document.querySelector("#rank p");
     const problems = document.querySelector("#problem-count p");
@@ -22,26 +22,35 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    function updateProgress(solved, total, label, circle, color){
-        const progressWidth = (solved/total) * 100;
-        circle.style = "border: border: 5px solid conic-gradient(#FFFFFF0F 100%, #${color} ${progressWidth}%);"
+    function updateProgress(solved, total, label, circle, color) {
+        const progressWidth = (solved / total) * 100;
+        circle.style.setProperty('--progress-color', color);
+        circle.style.setProperty('--progress-percent', `${progressWidth}%`);
     }
 
-    async function fetchUserDetails(username){
+    async function fetchUserDetails(username) {
         const url = "https://leetcode-stats-api.herokuapp.com/" + username;
         try {
             const response = await fetch(url);
-            if(response.ok){
+            if (response.ok) {
                 const data = await response.json();
                 console.log(data);
                 rank.innerHTML = data['ranking'];
                 problems.innerHTML = data['totalSolved'];
                 acceptance.innerHTML = data['acceptanceRate'];
                 submissions.innerHTML = Object.keys(data.submissionCalendar).length;
-                if(data['status']=='error'){
+                if (data['status'] == 'error') {
                     alert(data['message']);
                 }
-                updateProgress(data["easySolved"], data["totalEasy"], easyLabel, easy, '#28c244');
+                updateProgress(data["easySolved"], data["totalEasy"], easyLabel, easy, '#0de84b');
+                updateProgress(data["mediumSolved"], data["totalMedium"], mediumLabel, medium, '#f1bc00');
+                updateProgress(data["hardSolved"], data["totalHard"], hardLabel, hard, '#ff6863');
+                easy.addEventListener("mousein", function () {
+                    easyLabel.addEventListener("mousein", function(){
+                        easyLabel.textContent = `${data["easySolved"]}/${data["totalEasy"]}`;
+                    })
+                });
+
             }
         } catch (error) {
             console.log(error);
@@ -50,10 +59,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     searchButton.addEventListener("click", function () {
         const userName = usernameInput.value.toString();
-        if(validateUserName(userName)){
+        if (validateUserName(userName)) {
             fetchUserDetails(userName);
         }
-        else    
+        else
             alert("Invalid Username");
     })
 })
